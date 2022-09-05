@@ -33,12 +33,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  Map data = {
+    'name': 'Skr Chowdhury',
+    'email': 'example@example.com',
+    'age': 29
+  };
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: AccountScreen(), routes: {
-      'account_screen': (context) => AccountScreen(),
-      'settings_screen': (context) => SettingsScreen(),
-    });
+    return Provider<Map>(
+      create: (context) => data,
+      child: MaterialApp(home: AccountScreen(), routes: {
+        'account_screen': (context) => AccountScreen(),
+        'settings_screen': (context) => SettingsScreen(),
+      }),
+    );
   }
 }

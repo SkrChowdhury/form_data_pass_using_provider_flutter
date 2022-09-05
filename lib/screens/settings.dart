@@ -37,7 +37,7 @@ class SettingsScreen extends StatelessWidget {
                     onSaved: (input) => data['age'] = input,
                   ),
                   TextButton(
-                    onPressed: () => formKey.currentState.save(),
+                    onPressed: () => formKey.currentState?.save(),
                     child: Text('Submit'),
                     style: TextButton.styleFrom(
                       primary: Colors.white,
