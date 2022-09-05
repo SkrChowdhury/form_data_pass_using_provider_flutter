@@ -37,8 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Data>(
       create: (context) => Data(),
-      child: MaterialApp(home: AccountScreen(), routes: {
-        'account_screen': (context) => AccountScreen(),
+      child: MaterialApp(home: const AccountScreen(), routes: {
+        'account_screen': (context) => const AccountScreen(),
         'settings_screen': (context) => SettingsScreen(),
       }),
     );

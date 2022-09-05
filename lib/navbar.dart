@@ -3,6 +3,8 @@ import 'screens/account.dart';
 import 'screens/settings.dart';
 
 class Navbar extends StatelessWidget {
+  const Navbar({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,11 +15,11 @@ class Navbar extends StatelessWidget {
           TextButton(
               onPressed: () =>
                   Navigator.pushReplacementNamed(context, AccountScreen.id),
-              child: Icon(Icons.account_circle, color: Colors.white)),
+              child: const Icon(Icons.account_circle, color: Colors.white)),
           TextButton(
               onPressed: () =>
                   Navigator.pushReplacementNamed(context, SettingsScreen.id),
-              child: Icon(Icons.settings, color: Colors.white)),
+              child: const Icon(Icons.settings, color: Colors.white)),
         ],
       ),
     );
