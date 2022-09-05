@@ -17,9 +17,10 @@ class AccountScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Name: ' + Provider.of<Map>(context)['name'].toString()),
-            Text('Email: ' + Provider.of<Map>(context)['email'].toString()),
-            Text('Age: ' + Provider.of<Map>(context)['age'].toString()),
+            Text('Name: ' + Provider.of<Data>(context).data['name'].toString()),
+            Text('Email: ' +
+                Provider.of<Data>(context).data['email'].toString()),
+            Text('Age: ' + Provider.of<Data>(context).data['age'].toString()),
           ],
         ),
       ),
